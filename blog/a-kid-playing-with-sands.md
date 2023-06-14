@@ -22,6 +22,6 @@ without worrying about anything else around.
 I want to have that peace.
 I want to feel alive.
 Even if the world crashes my dreams,
-I want to be jump in happiness because I tried.
+I want to jump in happiness because I tried.
 I want to be that kid again.
 I just want to be that kid again.
