@@ -5,7 +5,6 @@ date: 2022-07-01
 
 Back in my college days, I had no idea what I wanted to do, so I chose to pursue the Chartered Accountancy Course, which focuses on finance, accounting, and taxation. It just seemed right at that time, as everyone around me was doing the same, so I decided to become a sheep and follow along.
 
-3	
 I was always fascinated by computers and rapidly emerging technology. I knew I would never be able to program something amazing myself as I chose to pursue finance and taxation, but still, that fascination was alive.
 
 My academics kept me occupied, but I was not enjoying it. One day, a thought struck me: "Is there a technology I can use to automate all my non-intellect tasks?"
