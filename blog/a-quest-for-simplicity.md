@@ -13,9 +13,7 @@ In this pursuit of simplicity, what I'm really after is freedom. I want to navig
 
 There's a bit of pain in this journey, you know? It's like silently swimming against a current that insists on dragging you along. I'm yearning for a place where common sense is more common than not, and where calmness is not a rare bird but more like a regular visitor.  
 
-This journey, it's not just about breaking free. It's about finding peace in the quiet corners of life, away from the chaos and the feeling of being smothered.  
-
-And then, there are these simple words that I hold onto. They're not fancy or complicated, just like me. They carry the weight of my thoughts and hopes, in a language that feels like my own.  
+This journey, it's not just about breaking free. It's about finding peace in the quiet corners of life, away from the chaos and the feeling of being smothered.   
 
 This personal quest—it's not me against the world, but more like a quiet declaration. A declaration that I want a life that's a bit less tangled. It's about weaving simplicity into a world that sometimes forgets the beauty in the basics.  
 
