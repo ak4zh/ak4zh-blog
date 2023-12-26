@@ -45,9 +45,7 @@ I was aware of a freelancing website, [Fiverr](https://business.fiverr.com/agwak
 
 I reached out to a few people with my crazy little pitch. I offered to work on their idea at a fraction of the cost they would pay if they hired any other developer for the same task, but I would take double the amount of time to deliver the project as I would learn and develop. After a few rejections, I found someone to bet on me.
 
-After a few rejections, I found someone to bet on me.
-
-![fiverr-order-history](./fiverr-order-history.png)
+After a few rejections, I found someone to bet on me.  
 
 _Now, I was being paid to learn something I enjoy._ Oddly, what I made with my first two gigs was roughly the same amount my interviewer had offered me to _stop playing with computers_ and do a month of labor in the _real office environment_.
 
