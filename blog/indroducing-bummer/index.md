@@ -20,7 +20,7 @@ I hand-drawn an ugly blueprint of what the app should look like.
 ![Bummer Blueprint](./bummer-blueprint.png)
 
 ### App naming
-Once I had the blueprint ready, I started thinking about a suitable name for the app. After considering many options I settled down with **"bummer"**.  Bummer means _a disappointing or unpleasant situation or experience._ The domain [bummer.me](https://bummer.me) was available so I immediately purchased it and started working on the app idea.
+Once I had the blueprint ready, I started thinking about a suitable name for the app. After considering many options I settled down with **"bummer"**.  Bummer means _a disappointing or unpleasant situation or experience._ The domain [bummer.vercel.app](https://bummer.vercel.app) was available so I immediately purchased it and started working on the app idea.
 
 
 ## Initial Design
@@ -31,5 +31,5 @@ With this post, I am moving to the next stage of validation and testing the app.
 
 ## Links
 Bummer is open source and comes with an MIT license so you can also dig inside the source code of the website at Github and get inspired.
-- **Website:** https://bummer.me
+- **Website:** https://bummer.vercel.app
 - **Github:** https://github.com/ak4zh/bummer

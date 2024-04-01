@@ -12,14 +12,14 @@
 	<Project
 			title="bummer"
 			img="/bummer.png"
-			web="https://bummer.me"
+			web="https://bummer.vercel.app"
 		>
 		One way to make your career regrets “less fearsome” is by talking to people about them. Bummer let’s you create a résumé of your failures and share it in the open.
 	</Project>
 	<Project
 			title="Stooge"
 			img="/stooge.png"
-			web="https://stooge.me"
+			web="https://stooge-ak4zh.vercel.app"
 		>
 		We all love comics. Comics are an amazing tool for storytelling. But I cannot even draw a perfect circle. So I have created stooge, a comic creator app to help educators and storytellers make comics without the need to draw.
 	</Project>
