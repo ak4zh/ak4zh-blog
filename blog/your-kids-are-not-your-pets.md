@@ -3,9 +3,7 @@ title: Your Kids Are Not Your Pets
 date: 2024-06-02
 ---
 
-# Your Kids Are Not Your Pets  
-
-As times change, one habit that reflects a disturbing trait among parents is treating their adult children as pets rather than independent individuals. They get themselves involved in every detail of their lives, from belief systems and food habits to even marriage decisions. Such controlling behavior is likely to have a deep impact on adult children's emotional well-being and autonomy.  
+Oone habit that reflects a disturbing trait among parents is treating their adult children as pets rather than independent individuals. They get themselves involved in every detail of their lives, from belief systems and food habits to even marriage decisions. Such controlling behavior is likely to have a deep impact on adult children's emotional well-being and autonomy.  
 
 ## Controlling Belief Systems  
 
