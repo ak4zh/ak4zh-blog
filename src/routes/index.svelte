@@ -10,7 +10,7 @@
   <title>{name}</title>
 </svelte:head>
 
-<div class="container px-6 py-16 mx-auto text-center">
+<div class="container px-6 py-4 mx-auto text-center">
   <div class="max-w-lg mx-auto">
     <div class="mt-8 space-y-2">
       <p class="mt-6 text-gray-500 dark:text-gray-300">
