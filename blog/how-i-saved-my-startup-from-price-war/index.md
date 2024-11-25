@@ -5,18 +5,18 @@ date: 2022-07-02
 
 ## The launch
 
-ConfluxBot was launched as a SaaS (software as a service) product in late 2018.
-There was no other software available in the market similar to ConfluxBot, and I knew it had the potential to become my hero product.
+My first SaaS (software as a service) was launched in late 2018.
+There was no other software available in the market similar to it, and I knew it had the potential to become my hero product.
 
-I was consistently adding new features to make it the best software of its type. Soon after the launch of ConfluxBot, it became the product that started to account for approximately 50% of my revenue.
+I was consistently adding new features to make it the best software of its type. Soon after the launch, it became the product that started to account for approximately 50% of my revenue.
 
 ## The Covid-19 impact
 
-When Covid-19 arrived, I was not at all worried as I was already working from home, and my business was online. I was the sole developer of ConfluxBot, I was sure covid wouldn’t bring any impact on my business, but it did.
+When Covid-19 arrived, I was not at all worried as I was already working from home, and my business was online. I was the sole developer of the product, I was sure covid wouldn’t bring any impact on my business, but it did.
 
-Covid resulted in offices getting shut down, which gave rise to developers globally having idle time. Some idle developers saw the opportunity in conflux and decided to copycat.
+Covid resulted in offices getting shut down, which gave rise to developers globally having idle time. Some idle developers saw the opportunity in my product and decided to copycat.
 
-By the end of March 2020, I started to see multiple clones of conflux bot emerging out of nowhere. Some of these clones were good and even had better features than conflux.
+By the end of March 2020, I started to see multiple clones of my SaaS emerging out of nowhere. Some of these clones were good and even had better features than mine.
 
 ## The big mistake
 
@@ -28,14 +28,14 @@ I realized I made the following two major mistakes:
 - I kept the database of customers out in the open (the telegram discussion group).
 
 Few of these copycat developers got their hands on my customers list, and they started poaching my clients.
-At that time, the membership of ConfluxBot was $15 a month. These copycat developers promised to offer their software with more features at half the price, $7 a month.
+At that time, the membership price was $15 a month. These copycat developers promised to offer their software with more features at half the price, $7 a month.
 
 ## Business was dying
 
 Everyone loves savings, so it attracted some price-sensitive customers immediately, and in the next two months, I had already lost 40-45% of my business to these competitors.
-I would not blame it on them, as I was impressed by a few of the competitors offering many more features than Conflux at half the price. I would have made the switch myself.
+I would not blame it on them, as I was impressed by a few of the competitors offering many more features than mine at half the price. I would have made the switch myself.
 
-I did attempt to implement all the competitor’s features on Conflux quickly, but it was not an easy path. Conflux codebase was two years old and had seen many iterations over the period. The existing codebase was a mess, and I had made some bad design decisions at the early stage, making it impossible to implement some of the new features.
+I did attempt to implement all the competitor’s features on mine quickly, but it was not an easy path. My codebase was two years old and had seen many iterations over the period. The existing codebase was a mess, and I had made some bad design decisions at the early stage, making it impossible to implement some of the new features.
 
 ## I was furious, frustrated and disappointed
 
@@ -47,10 +47,10 @@ I understood I had to make a wise decision quickly or start looking for a new st
 At this point, I decided to risk it all. I decided if I cannot bank on my idea anymore, a copycat should not be able to, as well.
 I took a bold step that could have ultimately killed the opportunity for anyone to bank on this idea anymore.
 
-## I self-cannibalized ConfluxBot
+## I self-cannibalized my SaaS
 
-I open-sourced the codebase for the core features of ConfluxBot. I even created a step-by-step tutorial on youtube on how I created ConfluxBot and how anyone can do it themselves.
-Now the people who were leaving conflux to save 50% on cost can keep 100% of their money and host the software themselves.
+I open-sourced the codebase for the core features of my SaaS. I even created a step-by-step tutorial on youtube on how I created my SaaS and how anyone can do it themselves.
+Now the people who were leaving my product to save 50% on cost can keep 100% of their money and host the software themselves.
 
 > If You Don't Cannibalize Yourself, Someone Else Will.
 >
@@ -69,11 +69,11 @@ If I wanted to survive the competition, I just not had to build a better version
 >
 > <cite>Steve Jobs</cite>
 
-After around four months, it started to look like a finished product, my first ever web app. It was multi-fold powerful than the existing version of conflux and much more advanced than any of the current competitors.
+After around four months, it started to look like a finished product, my first ever web app. It was multi-fold powerful than the existing version and much more advanced than any of the current competitors.
 
 It had all the features I planned, yet it was not as appealing to the eyes; remember, I still suck as a designer. Much more work was needed to polish the app, but I decided not to wait any longer and did a soft launch. It helped me launch at the right time and still be able to keep polishing and improving the product while getting immediate feedback from the actual users.
 
-The new Conflux was now unique and often better than any existing alternatives. Instead of lowering prices to match the competitors, I could now keep the same base price of $15 a month and launch three more premium plans, and now the most premium package was $100 a month.
+The new app was now unique and often better than any existing alternatives. Instead of lowering prices to match the competitors, I could now keep the same base price of $15 a month and launch three more premium plans, and now the most premium package was $100 a month.
 
 ## I slowly regained most of the lost customers
 
@@ -88,11 +88,11 @@ The competitors were giving me competition on price. However, instead of lowerin
 >
 > <cite>Jack Ma</cite>
 
-To this date, Conflux still maintains majority of the market share while still charging a premium price.
+To this date, it still maintains majority of the market share while still charging a premium price.
 
-I have learned many lessons in my Conflux journey, and I no longer wait for a competitor to force me to innovate.
+I have learned many lessons in my SaaS journey, and I no longer wait for a competitor to force me to innovate.
 I innovate and improve my service every single day.
 
 I do not fear self-cannibalize anymore.
 
-As of 2022, I am working on the third iteration of Conflux, which will overcome some leftover limitations the current one has and help me stay ahead of the competition.
+As of 2022, I am working on the third iteration of my app, which will overcome some leftover limitations the current one has and help me stay ahead of the competition.
