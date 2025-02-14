@@ -16,7 +16,7 @@
     <div class="flex h-16 px-4 py-2 justify-between items-center">
       <nav class="flex items-center space-x-4 sm:space-x-8">
         <NavLink href="/">ak4zh</NavLink>
-        <NavLink href="/projects">projects</NavLink>
+        // <NavLink href="/projects">projects</NavLink>
         <NavLink href="/blog">blog</NavLink>
       </nav>
       {#if browser}
