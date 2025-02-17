@@ -3,25 +3,25 @@ title: A kid playing with the sands
 date: 2022-10-11
 ---
 
-On the lands of the andamans, sitting on a remote beach.
+On the lands of the andamans, sitting on a remote beach.  
 A kid playing with the sand caught my attention.
 
-He is tyring to build a sand sculpture,
-but the waves washes it down.
-He builds again, this time much faster,
+He is tyring to build a sand sculpture,  
+but the waves washes it down.  
+He builds again, this time much faster,  
 so he can finish before the waves.
 
-Finally he finished.
-When the waves hit and washed it down.
-He jumped, he laughed and he clapped.
+Finally he finished.  
+When the waves hit and washed it down.  
+He jumped, he laughed and he clapped.  
 He was delighted he built it, even though it was going to crash.
 
-He was living in the moment,
+He was living in the moment,  
 without worrying about anything else around.
 
-I want to have that peace.
-I want to feel alive.
-Even if the world crashes my dreams,
-I want to jump in happiness because I tried.
-I want to be that kid again.
-I just want to be that kid again.
+I want to have that peace.  
+I want to feel alive.  
+Even if the world crashes my dreams,  
+I want to jump in happiness because I tried.  
+I want to be that kid again.  
+I just want to be that kid again.  
