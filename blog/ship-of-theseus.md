@@ -1,6 +1,6 @@
 ---
 title: The Ship of Theseus and the Self
-date: 2025-12-01
+date: 2025-12-03
 ---
 
 A few days ago I was reading about the "Ship of Theseus", also known as the "Theseus Paradox". It's a thought experiment about identity, asking whether an object remains the same if all of its original components are replaced over time.  
