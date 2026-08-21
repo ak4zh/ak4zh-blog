@@ -4,16 +4,12 @@ import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
 
 /** @type {import('@sveltejs/kit').Config} */
-const config = {
+export default {
   extensions: ['.svelte', ...mdsvexConfig.extensions],
-
   preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
-
   kit: {
     adapter: adapter({
       runtime: 'nodejs22.x'
     })
   }
 }
-
-export default config

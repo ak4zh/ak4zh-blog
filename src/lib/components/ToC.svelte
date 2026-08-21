@@ -73,8 +73,11 @@
   <ul class="mt-2 !pl-0 text-sm space-y-1.5 border-l border-slate-200 dark:border-slate-800 pl-3">
     {#each headings as heading}
       <li
-        class="heading list-none !pl-0 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors"
-        class:active={activeHeading?.node === heading.node}
+        class={`heading list-none !pl-0 transition-colors ${
+          activeHeading?.node === heading.node
+            ? 'text-slate-900 dark:text-slate-100 font-semibold border-l-2 border-indigo-500 -ml-[13px] pl-2.5'
+            : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+        }`}
         style={`margin-left: ${heading.depth * 0.75}rem`}
       >
         <a class="!no-underline block py-0.5" href={`#${heading.node.id}`}>{heading.title}</a>
@@ -82,9 +85,3 @@
     {/each}
   </ul>
 {/if}
-
-<style lang="postcss">
-  .active {
-    @apply text-slate-900 dark:text-slate-100 font-semibold border-l-2 border-primary-500 -ml-[13px] pl-2.5;
-  }
-</style>

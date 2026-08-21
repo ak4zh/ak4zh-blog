@@ -1,40 +1,25 @@
-@tailwind base;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
-@layer utilities {
-  .focus {
-    @apply outline-none focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 dark:focus-visible:ring-blue-300;
-  }
+@theme {
+  --color-primary-500: #6366f1;
+  --color-primary-600: #4f46e5;
+  --color-primary-700: #4338ca;
 }
 
-.prose img {
-  @apply rounded-md shadow-md dark:shadow-slate-900;
-}
-
+.prose img,
 .prose video {
-  @apply rounded-md shadow-md dark:shadow-slate-900;
+  @apply rounded-md shadow-md dark:shadow-slate-900 mx-auto;
 }
 
 .prose pre {
-  @apply shadow-md dark:shadow-slate-900;
+  @apply shadow-md dark:shadow-slate-900 rounded-lg p-4;
 }
 
 hr {
-  @apply !border-slate-300 dark:!border-slate-700;
+  @apply border-slate-300 dark:border-slate-800;
 }
 
-button {
-  @apply rounded-md;
-  @apply focus;
+button, a {
+  @apply outline-none focus-visible:ring-2 focus-visible:ring-indigo-500;
 }
-
-a {
-  @apply rounded-sm;
-  @apply focus;
-}
-
-svg {
-  @apply outline-none focus:outline-none;
-}
-
-@tailwind components;
-@tailwind utilities;
