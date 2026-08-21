@@ -1,45 +1,62 @@
 <script>
-  import ButtonLink from '$lib/components/ButtonLink.svelte'
-  import PostPreview from '$lib/components/PostPreview.svelte'
   import { name } from '$lib/info.js'
+  import { format, parseISO } from 'date-fns'
 
   let { data } = $props()
   let recentPosts = $derived(data.recentPosts || [])
+
+  function formatDate(dateStr) {
+    if (!dateStr) return ''
+    try {
+      return format(parseISO(dateStr), 'MMM d, yyyy')
+    } catch {
+      return dateStr
+    }
+  }
 </script>
 
 <svelte:head>
-  <title>{name} — Full Stack Developer & Writer</title>
-  <meta name="description" content="Personal blog and portfolio of ak4zh - full stack developer, builder, and lifelong learner." />
+  <title>{name} — Blog & Writings</title>
+  <meta name="description" content="Personal blog and writings of ak4zh." />
 </svelte:head>
 
-<div class="w-full max-w-4xl mx-auto py-4">
-  <div class="text-center py-10 max-w-2xl mx-auto">
-    <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white !mb-4">
-      Hi, I'm <span class="bg-gradient-to-r from-primary-500 to-indigo-500 bg-clip-text text-transparent">{name}</span>
+<div class="space-y-12">
+  <!-- Minimal Bio -->
+  <section class="space-y-4">
+    <h1 class="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-[#161615] dark:text-[#f5f5f0]">
+      Hey, I'm {name}.
     </h1>
-    <p class="text-lg sm:text-xl text-slate-600 dark:text-slate-300 font-medium !mt-2">
-      A self-taught full stack developer.
+    <p class="text-lg text-[#40403b] dark:text-[#c4c3bc] leading-relaxed font-serif">
+      A self-taught full stack developer. I learn by building software and write about ideas, lessons, digital tools, and personal growth.
     </p>
-    <p class="text-slate-500 dark:text-slate-400 font-light italic !mt-2">
-      "Learning by doing is the only way I know how to learn."
-    </p>
-  </div>
+  </section>
 
-  <section class="mt-8">
-    <div class="flex items-center justify-between !mb-6 border-b border-slate-200 dark:border-slate-800 pb-3">
-      <h2 class="text-2xl font-bold text-slate-900 dark:text-white !my-0">
-        Recent Posts
-      </h2>
-      <ButtonLink href="/blog" size="small" raised={false} class="hover:underline">
-        View All Posts
-      </ButtonLink>
+  <!-- Recent Writing -->
+  <section class="space-y-6">
+    <div class="flex items-baseline justify-between border-b border-[#e6e5e0] dark:border-[#2a2a28] pb-3">
+      <h2 class="text-xl font-serif font-bold text-[#161615] dark:text-[#f5f5f0]">Recent Posts</h2>
+      <a href="/blog" class="text-xs font-sans font-medium text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0] underline underline-offset-4">
+        All posts →
+      </a>
     </div>
 
-    <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-      {#each recentPosts as post (post.slug)}
-        <div class="p-5 border border-slate-200 dark:border-slate-800/80 rounded-xl bg-slate-50/50 dark:bg-slate-900/40 hover:border-slate-300 dark:hover:border-slate-700 transition-all duration-200">
-          <PostPreview {post} small />
-        </div>
+    <div class="space-y-6">
+      {#each recentPosts.slice(0, 8) as post (post.slug)}
+        <article class="group flex flex-col sm:flex-row sm:items-baseline justify-between gap-1 sm:gap-4">
+          <h3 class="text-lg font-serif font-semibold text-[#161615] dark:text-[#e6e5e0] group-hover:underline underline-offset-4 leading-snug">
+            <a href={`/blog/${post.slug}`} data-sveltekit-preload-data="hover">
+              {post.title}
+            </a>
+          </h3>
+
+          <div class="flex items-center gap-2 text-xs font-sans text-[#8e8d87] dark:text-[#7d7c76] whitespace-nowrap shrink-0">
+            {#if post.date}
+              <time datetime={post.date}>{formatDate(post.date)}</time>
+              <span>•</span>
+            {/if}
+            <span>{post.readingTime}</span>
+          </div>
+        </article>
       {/each}
     </div>
   </section>

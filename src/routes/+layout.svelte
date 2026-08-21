@@ -3,9 +3,8 @@
   import '../prism.css'
   import { browser } from '$app/environment'
   import { onMount } from 'svelte'
-  import { Sun, Moon, Rss } from '@lucide/svelte'
-  import GithubIcon from '$lib/components/GithubIcon.svelte'
-  import NavLink from '$lib/components/NavLink.svelte'
+  import { page } from '$app/stores'
+  import { Sun, Moon } from '@lucide/svelte'
   import { name } from '$lib/info.js'
 
   let { children } = $props()
@@ -21,7 +20,6 @@
     } else {
       prefersLight = !window.matchMedia('(prefers-color-scheme: dark)').matches
     }
-
     applyTheme()
   })
 
@@ -41,64 +39,62 @@
       document.documentElement.classList.add('dark')
     }
   }
+
+  let currentPath = $derived($page.url.pathname)
 </script>
 
-<div class="flex flex-col min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans selection:bg-slate-200 dark:selection:bg-slate-800">
-  <div class="max-w-4xl mx-auto flex flex-col flex-grow w-full px-4 sm:px-6">
-    <header class="flex h-20 justify-between items-center border-b border-slate-200/80 dark:border-slate-800/80">
-      <nav class="flex items-center space-x-6 sm:space-x-8">
-        <NavLink href="/">{name}</NavLink>
-        <NavLink href="/blog">Blog</NavLink>
-        <NavLink href="/projects">Projects</NavLink>
-      </nav>
+<div class="min-h-screen bg-[#fbfbfa] dark:bg-[#161615] text-[#242420] dark:text-[#e6e5e0] transition-colors duration-200">
+  <div class="max-w-2xl mx-auto px-6 py-10 flex flex-col min-h-screen">
+    <!-- Minimal Header -->
+    <header class="flex items-center justify-between pb-14 font-sans">
+      <a href="/" class="text-xl font-serif font-bold tracking-tight text-[#161615] dark:text-[#f5f5f0] hover:opacity-80 transition-opacity">
+        {name}
+      </a>
 
-      <div class="flex items-center space-x-3">
+      <div class="flex items-center space-x-6 text-sm font-medium">
         <a
-          href="/rss.xml"
-          target="_blank"
-          aria-label="RSS Feed"
-          class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors"
+          href="/"
+          class={`transition-colors ${currentPath === '/' ? 'text-[#161615] dark:text-[#f5f5f0] underline underline-offset-4 font-semibold' : 'text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0]'}`}
         >
-          <Rss class="w-5 h-5" />
+          home
         </a>
         <a
-          href="https://github.com/ak4zh"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="GitHub Profile"
-          class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors"
+          href="/blog"
+          class={`transition-colors ${currentPath.startsWith('/blog') ? 'text-[#161615] dark:text-[#f5f5f0] underline underline-offset-4 font-semibold' : 'text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0]'}`}
         >
-          <GithubIcon class="w-5 h-5" />
+          blog
         </a>
 
         {#if isMounted}
           <button
             type="button"
-            aria-label="Toggle Dark Mode"
+            aria-label="Toggle theme"
             onclick={toggleTheme}
-            class="p-2 rounded-lg text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors"
+            class="text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0] transition-colors p-1"
           >
             {#if prefersLight}
-              <Moon class="w-5 h-5" />
+              <Moon class="w-4 h-4" />
             {:else}
-              <Sun class="w-5 h-5" />
+              <Sun class="w-4 h-4" />
             {/if}
           </button>
         {/if}
       </div>
     </header>
 
-    <main class="mt-6 flex flex-col w-full flex-grow py-4 prose prose-slate prose-sm sm:prose sm:prose-slate sm:prose-lg max-w-none dark:prose-invert">
+    <!-- Main Content -->
+    <main id="main-content" class="flex-grow">
       {#if children}
         {@render children()}
       {/if}
     </main>
 
-    <footer class="py-8 mt-12 border-t border-slate-200/80 dark:border-slate-800/80 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500 dark:text-slate-400">
-      <p>© {new Date().getFullYear()} {name}. Built with SvelteKit 2 & Svelte 5.</p>
-      <div class="flex items-center space-x-4">
-        <a href="/rss.xml" class="hover:underline">RSS</a>
-        <a href="https://github.com/ak4zh" class="hover:underline">GitHub</a>
+    <!-- Minimal Footer -->
+    <footer class="pt-16 pb-8 border-t border-[#e6e5e0] dark:border-[#2a2a28] mt-20 text-xs font-sans text-[#706f6a] dark:text-[#94938d] flex justify-between items-center">
+      <p>© {new Date().getFullYear()} {name}</p>
+      <div class="flex items-center space-x-5">
+        <a href="/rss.xml" target="_blank" class="hover:underline">rss</a>
+        <a href="https://github.com/ak4zh" target="_blank" rel="noopener noreferrer" class="hover:underline">github</a>
       </div>
     </footer>
   </div>
