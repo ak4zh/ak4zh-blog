@@ -5,9 +5,9 @@
 /**
  * Used for the header of the page and in SEO
  */
-export const name = 'ak4zh' // replace with your name
+export const name = 'akash' // replace with your name
 
 /**
  * Used for SEO in /blog/[slug]
  */
-export const website = 'https://ak4zh.com'
+export const website = 'https://manzil-e-akash.vercel.app'
