@@ -23,7 +23,7 @@
 
 <div class="fixed top-0 left-0 right-0 h-1 z-50 bg-transparent" aria-hidden="true">
   <div
-    class="h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 transition-all duration-150 ease-out"
+    class="h-full bg-[#242420] dark:bg-[#e6e5e0] transition-all duration-150 ease-out opacity-80"
     style="width: {progress}%;"
   ></div>
 </div>

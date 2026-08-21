@@ -2,6 +2,7 @@
   import { format, parseISO } from 'date-fns'
   import { name, website } from '$lib/info.js'
   import ReadingProgress from '$lib/components/ReadingProgress.svelte'
+  import AudioReader from '$lib/components/AudioReader.svelte'
 
   let { data } = $props()
   let post = $derived(data.post)
@@ -40,17 +41,22 @@
     </a>
   </div>
 
-  <header class="space-y-3 border-b border-[#e6e5e0] dark:border-[#2a2a28] pb-6">
+  <header class="space-y-4 border-b border-[#e6e5e0] dark:border-[#2a2a28] pb-6">
     <h1 class="text-3xl sm:text-4xl font-serif font-bold text-[#161615] dark:text-[#f5f5f0] tracking-tight leading-tight">
       {post.title}
     </h1>
 
-    <div class="text-xs font-sans text-[#8e8d87] dark:text-[#7d7c76] flex items-center gap-2">
-      {#if formattedDate}
-        <time datetime={post.date}>{formattedDate}</time>
-        <span>•</span>
-      {/if}
-      <span>{post.readingTime}</span>
+    <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+      <div class="text-xs font-sans text-[#8e8d87] dark:text-[#7d7c76] flex items-center gap-2">
+        {#if formattedDate}
+          <time datetime={post.date}>{formattedDate}</time>
+          <span>•</span>
+        {/if}
+        <span>{post.readingTime}</span>
+      </div>
+
+      <!-- Text to Speech Audio Reader Button -->
+      <AudioReader title={post.title} targetSelector=".prose" />
     </div>
   </header>
 
