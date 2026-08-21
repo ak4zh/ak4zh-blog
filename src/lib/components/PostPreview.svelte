@@ -2,31 +2,47 @@
   import { format, parseISO } from 'date-fns'
   import ButtonLink from './ButtonLink.svelte'
 
-  export let post
-  export let small = false
+  let { post, small = false, actions = null } = $props()
+
+  let formattedDate = $derived.by(() => {
+    if (!post?.date) return ''
+    try {
+      return format(parseISO(post.date), 'MMMM d, yyyy')
+    } catch {
+      return post.date
+    }
+  })
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col h-full justify-between group">
   <div>
     {#if !small}
-      <h1 class="!mt-0 !mb-2">
-        <a href={`/blog/${post.slug}`} sveltekit:prefetch>{post.title}</a>
-      </h1>
+      <h2 class="!mt-0 !mb-2 text-2xl font-bold group-hover:text-primary-600 transition-colors">
+        <a href={`/blog/${post.slug}`} data-sveltekit-preload-data="hover">{post.title}</a>
+      </h2>
     {:else}
-      <h3 class="!mt-0 !mb-2">
-        <a href={`/blog/${post.slug}`} sveltekit:prefetch>{post.title}</a>
+      <h3 class="!mt-0 !mb-2 text-lg font-semibold group-hover:text-primary-600 transition-colors">
+        <a href={`/blog/${post.slug}`} data-sveltekit-preload-data="hover">{post.title}</a>
       </h3>
     {/if}
-    <div class="opacity-70">
-      <time>{format(new Date(parseISO(post.date)), 'MMMM d, yyyy')}</time>
-      •
+    <div class="text-xs sm:text-sm text-slate-500 dark:text-slate-400 mb-3 flex items-center gap-2">
+      <time datetime={post.date}>{formattedDate}</time>
+      <span>•</span>
       <span>{post.readingTime}</span>
     </div>
+
+    {#if post.preview?.html}
+      <div class="prose-sm text-slate-600 dark:text-slate-300 line-clamp-3 mb-4">
+        {@html post.preview.html}
+      </div>
+    {/if}
   </div>
-  <div class="flex-1">{@html post.preview.html}</div>
-  <slot name="actions">
-    <div class="flex justify-end w-full">
-      <ButtonLink href={`/blog/${post.slug}`}>Read More</ButtonLink>
+
+  {#if actions}
+    {@render actions()}
+  {:else}
+    <div class="flex justify-end w-full pt-2">
+      <ButtonLink href={`/blog/${post.slug}`} size={small ? 'small' : 'medium'}>Read More</ButtonLink>
     </div>
-  </slot>
+  {/if}
 </div>

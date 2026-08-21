@@ -2,17 +2,20 @@
   import { page } from '$app/stores'
   import { onMount } from 'svelte'
 
-  export let allowedHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6']
-  export let activeHeading = null
+  let { allowedHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] } = $props()
 
-  let scrollY
-  let headings = []
+  let activeHeading = $state(null)
+  let headings = $state([])
 
   function updateHeadings() {
+    if (typeof document === 'undefined') return
     const nodes = [
-      // Exclude h1 as those should be reserved for the post title
       ...document.querySelectorAll(`article :where(${allowedHeadings.join(', ')}):not(#__sections)`)
     ]
+    if (nodes.length === 0) {
+      headings = []
+      return
+    }
     const depths = nodes.map((node) => Number(node.nodeName[1]))
     const minDepth = Math.min(...depths)
 
@@ -22,71 +25,66 @@
       node
     }))
 
-    // set first heading as active if null on page load
-    if (activeHeading === null) {
+    if (activeHeading === null && headings.length > 0) {
       activeHeading = headings[0]
     }
   }
 
-  onMount(() => {
-    updateHeadings()
-    setActiveHeading()
-  })
-
-  if (typeof window !== 'undefined') {
-    page.subscribe(() => {
-      updateHeadings()
-      setActiveHeading()
-    })
-  }
-
   function setActiveHeading() {
-    scrollY = window.scrollY
+    if (typeof window === 'undefined' || headings.length === 0) return
+    const scrollY = window.scrollY
 
     const visibleIndex =
       headings.findIndex(
         (heading) => heading.node.offsetTop + heading.node.clientHeight > scrollY
       ) - 1
 
-    activeHeading = headings[visibleIndex]
+    if (visibleIndex >= 0) {
+      activeHeading = headings[visibleIndex]
+    }
 
     const pageHeight = document.body.scrollHeight
     const scrollProgress = (scrollY + window.innerHeight) / pageHeight
-    if (scrollProgress > 0.999) {
+    if (scrollProgress > 0.999 && headings.length > 0) {
       activeHeading = headings[headings.length - 1]
     }
   }
+
+  onMount(() => {
+    updateHeadings()
+    setActiveHeading()
+    const unsubscribe = page.subscribe(() => {
+      setTimeout(() => {
+        updateHeadings()
+        setActiveHeading()
+      }, 50)
+    })
+    return () => unsubscribe()
+  })
 </script>
 
-<svelte:window on:scroll={setActiveHeading} />
+<svelte:window onscroll={setActiveHeading} />
 
-<h6 id="__sections" class="uppercase text-slate-400/75 dark:text-slate-600 font-bold text-sm">
-  Sections
-</h6>
+{#if headings.length > 0}
+  <h6 id="__sections" class="uppercase text-slate-400 dark:text-slate-500 font-bold text-xs tracking-wider mb-2">
+    On this page
+  </h6>
 
-<ul class="mt-2 !pl-0">
-  {#each headings as heading}
-    <li
-      class="heading list-none my-2 !pl-0 text-base text-slate-400 hover:text-slate-900 dark:text-slate-500 hover:dark:text-slate-100 transition-colors"
-      class:active={activeHeading?.node === heading.node}
-      style={`--depth: ${heading.depth}`}
-    >
-      <a class="!no-underline" href={`#${heading.node.id}`}>{heading.title}</a>
-    </li>
-  {/each}
-</ul>
+  <ul class="mt-2 !pl-0 text-sm space-y-1.5 border-l border-slate-200 dark:border-slate-800 pl-3">
+    {#each headings as heading}
+      <li
+        class="heading list-none !pl-0 text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100 transition-colors"
+        class:active={activeHeading?.node === heading.node}
+        style={`margin-left: ${heading.depth * 0.75}rem`}
+      >
+        <a class="!no-underline block py-0.5" href={`#${heading.node.id}`}>{heading.title}</a>
+      </li>
+    {/each}
+  </ul>
+{/if}
 
 <style lang="postcss">
-  .heading {
-    margin-left: calc(var(--depth, 0) * 0.75rem);
-  }
-
   .active {
-    @apply text-slate-900 font-medium;
-  }
-
-  /* can't use dark: modifier in @apply */
-  :global(.dark) .active {
-    @apply text-slate-100;
+    @apply text-slate-900 dark:text-slate-100 font-semibold border-l-2 border-primary-500 -ml-[13px] pl-2.5;
   }
 </style>

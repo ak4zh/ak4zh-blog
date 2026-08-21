@@ -1,8 +1,13 @@
+const colors = require('tailwindcss/colors')
+
 module.exports = {
   darkMode: 'class',
   content: ['./src/**/*.{html,js,svelte,ts,md,svx}'],
   theme: {
     extend: {
+      colors: {
+        primary: colors.indigo,
+      },
       typography: ({ theme }) => {
         return {
           DEFAULT: {
@@ -17,12 +22,12 @@ module.exports = {
                 borderRadius: theme('borderRadius.md'),
                 paddingTop: theme('spacing.1'),
                 paddingBottom: theme('spacing.1'),
-                paddingLeft: theme('spacing.1'),
-                paddingRight: theme('spacing.1'),
+                paddingLeft: theme('spacing.1.5'),
+                paddingRight: theme('spacing.1.5'),
                 fontFamily: 'inherit !important',
                 fontWeight: '500 !important',
                 color: theme('colors.slate.900'),
-                backgroundColor: theme('colors.slate.300')
+                backgroundColor: theme('colors.slate.200')
               },
               'code::before': {
                 content: '""'
@@ -53,39 +58,21 @@ module.exports = {
               }
             }
           },
-          sm: {
-            css: {
-              pre: {
-                code: {
-                  fontSize: theme('fontSize.xs')[0]
-                }
-              }
-            }
-          },
-          lg: {
-            css: {
-              h1: {
-                fontSize: theme('fontSize.4xl')[0]
-              }
-            }
-          },
-
           invert: {
             css: {
               hr: {
-                borderColor: theme('colors.slate.700')
+                borderColor: theme('colors.slate.800')
               },
               code: {
-                color: theme('colors.slate.300'),
-                backgroundColor: theme('colors.slate.700')
+                color: theme('colors.slate.200'),
+                backgroundColor: theme('colors.slate.800')
               },
-
               'a code': {
                 color: theme('colors.white')
               },
               'pre, pre code': {
                 color: theme('colors.slate.200'),
-                backgroundColor: theme('colors.slate.800')
+                backgroundColor: theme('colors.slate.900')
               }
             }
           }

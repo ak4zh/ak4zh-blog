@@ -6,29 +6,22 @@
     <link rel="icon" href="/favicon.png" />
     %sveltekit.head%
     <script>
-      const storageValue = JSON.parse(localStorage.getItem('prefersLight'))
-      const prefersLight = storageValue
-        ? Boolean(storageValue)
-        : window?.matchMedia('(prefers-color-scheme: light)').matches
+      try {
+        const stored = localStorage.getItem('prefersLight')
+        const prefersLight = stored !== null
+          ? JSON.parse(stored)
+          : !window.matchMedia('(prefers-color-scheme: dark)').matches
 
-      localStorage.setItem('prefersLight', prefersLight)
-
-      // default to dark mode unless explicitly set preference to light
-      if (prefersLight) {
-        document.querySelector('html').classList.remove('dark')
-      }
+        if (prefersLight) {
+          document.documentElement.classList.remove('dark')
+        } else {
+          document.documentElement.classList.add('dark')
+        }
+      } catch (e) {}
     </script>
   </head>
 
-  <body class="relative transition-colors duration-100 bg-slate-100 dark:bg-slate-900">
-    <div
-      class="fixed inset-0 -z-50 dark:bg-gradient-to-br dark:from-slate-900 dark:to-slate-800"
-    ></div>
-    <div class="z-0">%sveltekit.body%</div>
-
-    <!-- this fixes a bug in chrome where animations trigger from unstyled to styled content on page load -->
-    <!-- https://stackoverflow.com/a/42969257/6342734 -->
-    <!-- prettier-ignore -->
-    <script> </script>
+  <body class="bg-white dark:bg-slate-950 text-slate-900 dark:text-slate-100 min-h-screen">
+    <div>%sveltekit.body%</div>
   </body>
 </html>

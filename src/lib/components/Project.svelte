@@ -1,75 +1,75 @@
 <script>
-  import LinkIcon from 'heroicons-svelte/outline/ExternalLinkIcon.svelte'
+  import { ExternalLink } from '@lucide/svelte'
 
-  export let title
-  export let img = undefined
-  export let video = undefined
-  export let iOS = undefined
-  export let android = undefined
-  export let web = undefined
-  export let github = undefined
-  export let download = undefined
+  let {
+    title,
+    img = undefined,
+    video = undefined,
+    iOS = undefined,
+    android = undefined,
+    web = undefined,
+    github = undefined,
+    download = undefined,
+    children
+  } = $props()
 
-  let links = [
-    web && {
-      url: web,
-      label: 'Website'
-    },
-    iOS && {
-      url: iOS,
-      label: 'iOS'
-    },
-    android && {
-      url: android,
-      label: 'Android'
-    },
-    github && {
-      url: github,
-      label: 'GitHub'
-    },
-    download && {
-      url: download,
-      label: 'Download'
-    }
-  ].filter(Boolean)
+  let links = $derived(
+    [
+      web && { url: web, label: 'Website' },
+      iOS && { url: iOS, label: 'iOS' },
+      android && { url: android, label: 'Android' },
+      github && { url: github, label: 'GitHub' },
+      download && { url: download, label: 'Download' }
+    ].filter(Boolean)
+  )
 </script>
 
 <div
-  class="flex flex-col md:flex-row items-start space-x-0 md:space-x-8 pb-8 border-b border-slate-300 dark:border-slate-700"
+  class="flex flex-col md:flex-row items-start gap-6 pb-8 border-b border-slate-300 dark:border-slate-800 group"
 >
-  <div class="order-2 md:order-1 !mx-auto w-auto md:md-0 md:w-1/3">
-    {#if img}
-      <img alt={`${title} Screenshot`} src={img} class="!mb-0 !mt-0 max-h-80 " />
-    {/if}
+  {#if img || video}
+    <div class="order-2 md:order-1 w-full md:w-1/3 flex-shrink-0">
+      {#if img}
+        <img
+          alt={`${title} Screenshot`}
+          src={img}
+          class="!mb-0 !mt-0 max-h-80 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 object-cover w-full"
+        />
+      {/if}
 
-    {#if video}
-      <iframe
-        class="w-full h-60 rounded-md"
-        src={video}
-        {title}
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      />
-    {/if}
-  </div>
-  <div class="order-1 md:order-2 w-auto md:w-2/3">
-    <h2 id={title} class="!mt-0 !mb-0 md:block"><a href={`#${title}`}>{title}</a></h2>
-    <div class="flex justify-start !mt-2 !mb-2 space-x-1">
+      {#if video}
+        <iframe
+          class="w-full h-60 rounded-lg shadow-sm"
+          src={video}
+          {title}
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+        ></iframe>
+      {/if}
+    </div>
+  {/if}
+  <div class="order-1 md:order-2 w-full flex-grow">
+    <h2 id={title} class="!mt-0 !mb-1 text-2xl font-bold">
+      <a href={`#${title}`} class="hover:text-primary-600 transition-colors">{title}</a>
+    </h2>
+    <div class="flex flex-wrap gap-2 !mt-2 !mb-3">
       {#each links as link}
         <a
           href={link.url}
-          class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium !no-underline bg-slate-200 hover:bg-slate-300 text-slate-800 dark:bg-slate-700 dark:hover:bg-slate-600"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium !no-underline bg-slate-200 hover:bg-slate-300 text-slate-800 dark:bg-slate-800 dark:hover:bg-slate-700 dark:text-slate-200 transition-colors gap-1"
         >
-          <span class="mr-1">
-            {link.label}
-          </span>
-          <LinkIcon class="w-3" />
+          <span>{link.label}</span>
+          <ExternalLink class="w-3 h-3" />
         </a>
       {/each}
     </div>
-    <p>
-      <slot />
-    </p>
+    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300">
+      {#if children}
+        {@render children()}
+      {/if}
+    </div>
   </div>
 </div>

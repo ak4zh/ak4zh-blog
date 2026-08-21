@@ -1,69 +1,64 @@
 <script>
   import ArrowRightIcon from './ArrowRightIcon.svelte'
 
-  export let href
-  export let raised = true
-  export let size = 'medium' // small, medium, or large
-
-  let className = ''
-
-  export { className as class }
+  let {
+    href,
+    raised = true,
+    size = 'medium',
+    class: className = '',
+    target = undefined,
+    rel = undefined,
+    iconStart = null,
+    iconEnd = null,
+    children
+  } = $props()
 </script>
 
-<div class="not-prose">
+<div class="not-prose inline-block">
   <a
-    {...$$restProps}
     {href}
-    class={'block text-slate-800 dark:text-slate-200 dark:text-opacity-90 rounded-md no-underline ' +
+    {target}
+    {rel}
+    data-sveltekit-preload-data="hover"
+    class={'inline-flex items-center text-slate-800 dark:text-slate-200 rounded-md no-underline font-medium transition-all duration-200 ' +
       className}
     class:small={size === 'small'}
     class:medium={size === 'medium'}
     class:large={size === 'large'}
     class:raised
-    sveltekit:prefetch
   >
-    <div class="flex items-center space-x-1">
-      <slot name="icon-start" />
+    <div class="flex items-center space-x-1.5">
+      {#if iconStart}
+        {@render iconStart()}
+      {/if}
       <span>
-        <slot />
+        {#if children}
+          {@render children()}
+        {/if}
       </span>
-      <slot name="icon-end">
-        <ArrowRightIcon class="h-5 w-5" />
-      </slot>
+      {#if iconEnd}
+        {@render iconEnd()}
+      {:else}
+        <ArrowRightIcon class="h-4 w-4" />
+      {/if}
     </div>
   </a>
 </div>
 
 <style lang="postcss">
   .small {
-    @apply text-sm font-medium;
-  }
-
-  .small.raised {
-    @apply px-2 py-1;
+    @apply text-xs px-2.5 py-1;
   }
 
   .medium {
-    @apply text-base;
-  }
-
-  .medium.raised {
-    @apply px-3 py-1;
+    @apply text-sm px-3.5 py-1.5;
   }
 
   .large {
-    @apply text-lg;
-  }
-
-  .large.raised {
-    @apply px-4 py-2;
+    @apply text-base px-5 py-2.5;
   }
 
   .raised {
-    @apply bg-slate-300;
-  }
-
-  :global(.dark) .raised {
-    @apply bg-slate-700;
+    @apply bg-slate-200 hover:bg-slate-300 dark:bg-slate-800 dark:hover:bg-slate-700 shadow-sm border border-slate-300/50 dark:border-slate-700/50;
   }
 </style>
