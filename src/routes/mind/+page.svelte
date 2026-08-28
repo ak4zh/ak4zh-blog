@@ -387,11 +387,6 @@
       <div class="flex items-center space-x-2 text-xs font-mono text-emerald-600 dark:text-emerald-400 uppercase tracking-widest">
         <Sparkles class="w-3.5 h-3.5" />
         <span>Personal Knowledge Dashboard</span>
-        {#if serverData.isD1}
-          <span class="px-2 py-0.5 rounded bg-blue-500/10 text-blue-600 dark:text-blue-400 border border-blue-500/20 normal-case tracking-normal font-sans text-[10px] flex items-center gap-1">
-            <Database class="w-3 h-3" /> Cloudflare D1
-          </span>
-        {/if}
       </div>
 
       <!-- Auth Controls -->
