@@ -43,7 +43,7 @@
 </script>
 
 <div class="min-h-screen bg-[#fbfbfa] dark:bg-[#161615] text-[#242420] dark:text-[#e6e5e0] transition-colors duration-200">
-  <div class="max-w-2xl mx-auto px-6 py-10 flex flex-col min-h-screen">
+  <div class={`mx-auto px-6 py-10 flex flex-col min-h-screen transition-all duration-200 ${currentPath.startsWith('/mind') ? 'max-w-4xl' : 'max-w-2xl'}`}>
     <!-- Minimal Header -->
 
     <header
@@ -68,6 +68,12 @@
           class={`transition-colors ${currentPath.startsWith('/blog') ? 'text-[#161615] dark:text-[#f5f5f0] underline underline-offset-4 font-semibold' : 'text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0]'}`}
         >
           blog
+        </a>
+        <a
+          href="/mind"
+          class={`transition-colors ${currentPath.startsWith('/mind') ? 'text-[#161615] dark:text-[#f5f5f0] underline underline-offset-4 font-semibold' : 'text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0]'}`}
+        >
+          mind
         </a>
 
         {#if isMounted}

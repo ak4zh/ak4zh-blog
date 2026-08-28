@@ -1,4 +1,4 @@
-import adapter from '@sveltejs/adapter-vercel'
+import adapter from '@sveltejs/adapter-cloudflare'
 import { vitePreprocess } from '@sveltejs/vite-plugin-svelte'
 import { mdsvex } from 'mdsvex'
 import mdsvexConfig from './mdsvex.config.js'
@@ -12,7 +12,7 @@ export default defineConfig({
     sveltekit({
       extensions: ['.svelte', ...mdsvexConfig.extensions],
       preprocess: [vitePreprocess(), mdsvex(mdsvexConfig)],
-      adapter: adapter({ runtime: 'nodejs22.x' })
+      adapter: adapter()
     })
   ],
   server: { fs: { allow: ['./'] } }

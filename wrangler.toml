@@ -1,0 +1,9 @@
+name = "ak4zh-blog"
+compatibility_date = "2026-08-28"
+compatibility_flags = ["nodejs_compat"]
+pages_build_output_dir = ".svelte-kit/cloudflare"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "mind-db"
+database_id = "4e2f7950-b761-4ccd-9833-a6e62b54b0e7"

@@ -13,7 +13,7 @@
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "8.0.0-next.3",
-		"@sveltejs/adapter-vercel": "7.0.0-next.8",
+		"@sveltejs/adapter-cloudflare": "8.0.0-next.6",
 		"@sveltejs/kit": "3.0.0-next.25",
 		"@sveltejs/vite-plugin-svelte": "^7.3.0",
 		"@tailwindcss/typography": "^0.5.20",
@@ -35,7 +35,8 @@
 		"tailwindcss": "^4.3.3",
 		"typescript": "^5.9.3",
 		"unist-util-visit": "^5.1.0",
-		"vite": "^8.2.2"
+		"vite": "^8.2.2",
+		"wrangler": "^3.114.0"
 	},
 	"type": "module",
 	"dependencies": {
