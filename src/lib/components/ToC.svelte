@@ -1,11 +1,10 @@
 <script>
-  import { page } from '$app/stores'
-  import { onMount } from 'svelte'
+  import { page } from '$app/state';
+  import { onMount } from 'svelte';
 
-  let { allowedHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] } = $props()
-
-  let activeHeading = $state(null)
-  let headings = $state([])
+  let { allowedHeadings = ['h1', 'h2', 'h3', 'h4', 'h5', 'h6'] } = $props();
+  let activeHeading = $state(null);
+  let headings = $state([]);
 
   function updateHeadings() {
     if (typeof document === 'undefined') return
@@ -16,14 +15,11 @@
       headings = []
       return
     }
-    const depths = nodes.map((node) => Number(node.nodeName[1]))
-    const minDepth = Math.min(...depths)
 
-    headings = nodes.map((node, idx) => ({
-      title: node.innerText,
-      depth: depths[idx] - minDepth,
-      node
-    }))
+    const depths = nodes.map((node) => Number(node.nodeName[1]));
+    const minDepth = Math.min(...depths);
+
+    headings = nodes.map((node, idx) => ({ title: node.innerText, depth: depths[idx] - minDepth, node }));
 
     if (activeHeading === null && headings.length > 0) {
       activeHeading = headings[0]
@@ -31,13 +27,10 @@
   }
 
   function setActiveHeading() {
-    if (typeof window === 'undefined' || headings.length === 0) return
-    const scrollY = window.scrollY
+    if (typeof window === 'undefined' || headings.length === 0) return;
 
-    const visibleIndex =
-      headings.findIndex(
-        (heading) => heading.node.offsetTop + heading.node.clientHeight > scrollY
-      ) - 1
+    const scrollY = window.scrollY;
+    const visibleIndex = headings.findIndex((heading) => heading.node.offsetTop + heading.node.clientHeight > scrollY) - 1;
 
     if (visibleIndex >= 0) {
       activeHeading = headings[visibleIndex]
@@ -63,7 +56,7 @@
   })
 </script>
 
-<svelte:window onscroll={setActiveHeading} />
+<svelte:window onscroll={setActiveHeading}></svelte:window>
 
 {#if headings.length > 0}
   <h6 id="__sections" class="uppercase text-slate-400 dark:text-slate-500 font-bold text-xs tracking-wider mb-2">

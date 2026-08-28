@@ -17,12 +17,12 @@ Maybe I just want some peace.
 
 I'm still, I'm quiet, I'm empty inside.  
 My eyes are shut, my fan is off,  
-there’s no voice, there’s no noise.  
+there’s no voice, there’s no noise.
 
 I see obscurity, and I see somebody in darkness.  
 Maybe it’s me.  
 How can I see even with my eyes shut?  
-I don’t know.  
+I don’t know.
 
 I see, that someone is breathing,  
 breathing in; breathing out.  

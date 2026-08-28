@@ -11,7 +11,7 @@ But I know you will understand.
 You are the one I always needed.  
 You are the only one I still need.  
 Yet I am leaving you all alone.  
-But I know you will understand.  
+But I know you will understand.
 
 Every time I will get a chance to choose,  
 I will always choose you.  

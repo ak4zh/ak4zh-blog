@@ -29,10 +29,7 @@ const posts = Object.entries(import.meta.glob('/blog/**/*.md', { eager: true }))
       slug,
       isIndexFile,
       date: metadata.date
-        ? format(
-            addTimezoneOffset(new Date(metadata.date)),
-            'yyyy-MM-dd'
-          )
+        ? format(addTimezoneOffset(new Date(metadata.date)), 'yyyy-MM-dd')
         : undefined,
       component: post.default,
       customPreview: metadata.preview
@@ -74,10 +71,20 @@ const posts = Object.entries(import.meta.glob('/blog/**/*.md', { eager: true }))
   .map((post, index, allPosts) => ({
     ...post,
     next: allPosts[index - 1]
-      ? { title: allPosts[index - 1].title, slug: allPosts[index - 1].slug, date: allPosts[index - 1].date, readingTime: allPosts[index - 1].readingTime }
+      ? {
+          title: allPosts[index - 1].title,
+          slug: allPosts[index - 1].slug,
+          date: allPosts[index - 1].date,
+          readingTime: allPosts[index - 1].readingTime
+        }
       : null,
     previous: allPosts[index + 1]
-      ? { title: allPosts[index + 1].title, slug: allPosts[index + 1].slug, date: allPosts[index + 1].date, readingTime: allPosts[index + 1].readingTime }
+      ? {
+          title: allPosts[index + 1].title,
+          slug: allPosts[index + 1].slug,
+          date: allPosts[index + 1].date,
+          readingTime: allPosts[index + 1].readingTime
+        }
       : null
   }))
 

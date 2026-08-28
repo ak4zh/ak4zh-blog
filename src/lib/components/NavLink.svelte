@@ -1,26 +1,26 @@
 <script>
-  import clsx from 'clsx'
-  import { page } from '$app/stores'
+  import clsx from 'clsx';
+  import { page } from '$app/state';
 
   let { href, class: className = '', children } = $props()
 
   let active = $derived.by(() => {
-    const currentPath = $page.url.pathname
+    const currentPath = page.url.pathname;
     if (href === '/') {
       return currentPath === '/'
     }
-    return currentPath.startsWith(href)
-  })
 
-  let linkClass = $derived(
-    active
-      ? 'text-lg font-bold sm:text-2xl text-slate-900 dark:text-white border-b-2 border-primary-500'
+    return currentPath.startsWith(href);
+  });
+
+  let linkClass = $derived(active
+    ? 'text-lg font-bold sm:text-2xl text-slate-900 dark:text-white border-b-2 border-primary-500'
       : 'text-base font-medium sm:text-xl text-slate-600 hover:text-slate-900 dark:text-slate-300 dark:hover:text-white transition-colors'
   )
 </script>
 
 <a
-  {href}
+  href={href}
   data-sveltekit-preload-data="hover"
   class={clsx(
     className,

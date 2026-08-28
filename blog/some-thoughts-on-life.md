@@ -5,9 +5,9 @@ date: 2022-07-23
 
 This post is not about software, technology, or any interesting story. If you are reading for something interesting, skip it. This post is just a collection of some of my random thoughts about life, love, relationships, society, and pain. I am not even sure what I am going to write. I will probably ramble a lot.
 
-So I am a programmer, I write code. Writing code is not difficult. Debugging it when something goes wrong, is the most difficult part. When you have made a mistake and your code does not work, you try to debug, you try to fix it. And that’s not easy, one mistake at line 27 may have resulted in many other mistakes in different parts of your code. You go line by line and that’s frustrating, you try everything but nothing works. It seems impossible to fix, finally, you get fed up and decide to give it up altogether. You decide to stop developing that program, and that’s perfectly fine. *If it’s affecting your mental health, it’s better to give up and move on.*
+So I am a programmer, I write code. Writing code is not difficult. Debugging it when something goes wrong, is the most difficult part. When you have made a mistake and your code does not work, you try to debug, you try to fix it. And that’s not easy, one mistake at line 27 may have resulted in many other mistakes in different parts of your code. You go line by line and that’s frustrating, you try everything but nothing works. It seems impossible to fix, finally, you get fed up and decide to give it up altogether. You decide to stop developing that program, and that’s perfectly fine. _If it’s affecting your mental health, it’s better to give up and move on._
 
-## But when it comes to life, things are different. 
+## But when it comes to life, things are different.
 
 Let’s look at it from a parent's perspective. I guess creating a kid is probably easier than growing them up. Your kids will make mistakes, they will mess up, and they will put you in difficult situations. You will be angry, you will feel frustrated, you will be exhausted, and it may look impossible, but you do not give up. **Why? Because you love them.**
 
@@ -15,7 +15,7 @@ When you are handling your kid, you know humans are not perfect, they make mista
 
 And that seems like a perfectly valid reason. To keep loving your kid in any situation, even if they mess up, even if they put you in a difficult situation. **Because you love them, and your love should not be conditional.** It’s unacceptable to love your kid only if they turn out amazing, and drop them if they make mistakes.
 
-But when we talk about some other variations of love in human life, *everything suddenly changes.* When you change the relationship between the two people from a parent-child to any other combination. You are suddenly expected to give up when things go wrong. Be it a marriage, a love relationship, or even a friendship. Why? Why does the perfectly valid reason for loving them fail here? Would you have thought about giving up your kid and adopting another one, because they made a mistake?
+But when we talk about some other variations of love in human life, _everything suddenly changes._ When you change the relationship between the two people from a parent-child to any other combination. You are suddenly expected to give up when things go wrong. Be it a marriage, a love relationship, or even a friendship. Why? Why does the perfectly valid reason for loving them fail here? Would you have thought about giving up your kid and adopting another one, because they made a mistake?
 
 When you are looking from a parent’s perspective, you were able to see the efforts of the parent. Their deep love for their kid. Their struggles. Now let’s look at it from the child’s perspective.
 

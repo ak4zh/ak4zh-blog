@@ -1,19 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en" class="dark scroll-smooth">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="/favicon.png" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
     %sveltekit.head%
     <script>
       try {
         const stored = localStorage.getItem('prefersLight')
-        const prefersLight = stored !== null
-          ? JSON.parse(stored)
-          : !window.matchMedia('(prefers-color-scheme: dark)').matches
+        const prefersLight =
+          stored !== null
+            ? JSON.parse(stored)
+            : !window.matchMedia('(prefers-color-scheme: dark)').matches
 
         if (prefersLight) {
           document.documentElement.classList.remove('dark')
@@ -24,8 +28,13 @@
     </script>
   </head>
 
-  <body class="bg-[#fbfbfa] dark:bg-[#161615] text-[#242420] dark:text-[#e6e5e0] min-h-screen font-serif antialiased selection:bg-stone-200 dark:selection:bg-stone-800">
-    <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-stone-800 focus:text-white focus:rounded-lg focus:shadow-xl focus:outline-none">
+  <body
+    class="bg-[#fbfbfa] dark:bg-[#161615] text-[#242420] dark:text-[#e6e5e0] min-h-screen font-serif antialiased selection:bg-stone-200 dark:selection:bg-stone-800"
+  >
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-stone-800 focus:text-white focus:rounded-lg focus:shadow-xl focus:outline-none"
+    >
       Skip to main content
     </a>
     <div>%sveltekit.body%</div>

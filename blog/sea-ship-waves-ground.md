@@ -4,15 +4,15 @@ date: 2022-10-10
 ---
 
 I am on a ship, at the center of the sea.  
-All I see is water, it's all around me.  
+All I see is water, it's all around me.
 
-I feel so small in this huge world. 
-There's no one to be found when I look around. 
-Just a million stars shining on the ground. 
+I feel so small in this huge world.
+There's no one to be found when I look around.
+Just a million stars shining on the ground.
 I'll never know just how far's too far.  
-But I'm gonna go as far as I can.  
+But I'm gonna go as far as I can.
 
 If I will reach the shore,  
-I will paint a picture with you in it. 
+I will paint a picture with you in it.
 I know the waves will wash it down.  
-But it will live in the water, even when I am in the ground.  
+But it will live in the water, even when I am in the ground.

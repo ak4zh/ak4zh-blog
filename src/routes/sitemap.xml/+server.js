@@ -1,5 +1,5 @@
-import { getPosts } from '$lib/get-posts'
-import { website } from '$lib/info'
+import { getPosts } from '#lib/get-posts.js'
+import { website } from '#lib/info.js'
 
 export function GET() {
   const postsUrl = `${website}/blog`
@@ -38,8 +38,8 @@ export function GET() {
       post.updated
         ? new Date(post.updated).toISOString()
         : post.date
-        ? new Date(post.date).toISOString()
-        : new Date().toISOString()
+          ? new Date(post.date).toISOString()
+          : new Date().toISOString()
     }</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

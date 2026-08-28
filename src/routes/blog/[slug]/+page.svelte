@@ -1,8 +1,8 @@
 <script>
   import { format, parseISO } from 'date-fns'
-  import { name, website } from '$lib/info.js'
-  import ReadingProgress from '$lib/components/ReadingProgress.svelte'
-  import AudioReader from '$lib/components/AudioReader.svelte'
+  import { name, website } from '#lib/info.js'
+  import ReadingProgress from '#lib/components/ReadingProgress.svelte'
+  import AudioReader from '#lib/components/AudioReader.svelte'
 
   let { data } = $props()
   let post = $derived(data.post)

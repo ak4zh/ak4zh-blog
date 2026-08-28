@@ -1,5 +1,5 @@
 ---
-title: Do we ever really move on? 
+title: Do we ever really move on?
 date: 2022-08-02
 ---
 

@@ -3,7 +3,6 @@ title: The modern internet sucks
 date: 2022-07-17
 ---
 
-
 Internet is a term we are all aware of. We are using the internet every single day of our current modern life. You have access to whatever information you desire. Everything is perfect, then why do I say it sucks?
 
 The internet itself is beautiful. What sucks is the modern version that we have built out of it. It sucks because we do. It is easier than ever to set up a personal website or a blog. And yet people are not spending an afternoon setting up a personal website. They signup for the next social media platform instead. Why? Because it is easier, you clicked on a button and your space is ready with immense reachability to the people just like you, the people who suck as well. The people who will spend hours of their precious time scrolling and looking at the pictures of your personal life. They may even drop a like or comment but then… what? What happens next? Nothing. Nothing is what happens next.

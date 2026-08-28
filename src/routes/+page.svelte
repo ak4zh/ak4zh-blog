@@ -1,5 +1,5 @@
 <script>
-  import { name } from '$lib/info.js'
+  import { name } from '#lib/info.js'
   import { format, parseISO } from 'date-fns'
 
   let { data } = $props()

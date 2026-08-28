@@ -1,16 +1,15 @@
 <script>
-  import '../app.css'
-  import '../prism.css'
-  import { browser } from '$app/environment'
-  import { onMount } from 'svelte'
-  import { page } from '$app/stores'
-  import { Sun, Moon } from '@lucide/svelte'
-  import { name } from '$lib/info.js'
+  import '../app.css';
+  import '../prism.css';
+  import { browser } from '$app/env';
+  import { onMount } from 'svelte';
+  import { page } from '$app/state';
+  import { Sun, Moon } from '@lucide/svelte';
+  import { name } from '#lib/info.js';
 
-  let { children } = $props()
-
-  let prefersLight = $state(false)
-  let isMounted = $state(false)
+  let { children } = $props();
+  let prefersLight = $state(false);
+  let isMounted = $state(false);
 
   onMount(() => {
     isMounted = true
@@ -40,18 +39,24 @@
     }
   }
 
-  let currentPath = $derived($page.url.pathname)
+  let currentPath = $derived(page.url.pathname);
 </script>
 
 <div class="min-h-screen bg-[#fbfbfa] dark:bg-[#161615] text-[#242420] dark:text-[#e6e5e0] transition-colors duration-200">
   <div class="max-w-2xl mx-auto px-6 py-10 flex flex-col min-h-screen">
     <!-- Minimal Header -->
-    <header class="flex items-center justify-between pb-14 font-sans">
-      <a href="/" class="text-xl font-serif font-bold tracking-tight text-[#161615] dark:text-[#f5f5f0] hover:opacity-80 transition-opacity">
-        {name}
-      </a>
 
-      <div class="flex items-center space-x-6 text-sm font-medium">
+    <header
+      class="flex items-center justify-between pb-14 font-sans"
+    >
+      <a
+        href="/"
+        class="text-xl font-serif font-bold tracking-tight text-[#161615] dark:text-[#f5f5f0] hover:opacity-80 transition-opacity"
+      >{name}</a>
+
+      <div
+        class="flex items-center space-x-6 text-sm font-medium"
+      >
         <a
           href="/"
           class={`transition-colors ${currentPath === '/' ? 'text-[#161615] dark:text-[#f5f5f0] underline underline-offset-4 font-semibold' : 'text-[#706f6a] dark:text-[#94938d] hover:text-[#161615] dark:hover:text-[#f5f5f0]'}`}

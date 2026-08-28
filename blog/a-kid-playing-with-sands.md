@@ -24,4 +24,4 @@ I want to feel alive.
 Even if the world crashes my dreams,  
 I want to jump in happiness because I tried.  
 I want to be that kid again.  
-I just want to be that kid again.  
+I just want to be that kid again.

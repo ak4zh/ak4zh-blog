@@ -3,7 +3,7 @@ title: Love, Possession, Ownership
 date: 2022-07-25
 ---
 
-More often than not, we try to put a leash on people we love and force them to do what makes us happy, what saves us from embarrassment, and what keeps our pride alive. We tell them we love them and we know what’s right for them. *But, do we? Is it really love? or ownership, if we are making decisions for someone else based on what benefits us.*
+More often than not, we try to put a leash on people we love and force them to do what makes us happy, what saves us from embarrassment, and what keeps our pride alive. We tell them we love them and we know what’s right for them. _But, do we? Is it really love? or ownership, if we are making decisions for someone else based on what benefits us._
 
 Possession means controlling or owning something. Maybe you can own a pet, but you can never own a person.
 
@@ -13,7 +13,7 @@ A loving relationship has to be a mutual decision made by both people – you ca
 
 When you love someone you openly discuss problems, not just what you find problematic, but what they do too. Whereas when you think you own someone you cannot even see the problems they state as a problem.
 
-When you love someone and they hurt you, you have every right to discuss it with them, tell them they have hurt you, and fight with them. But **you have no right to humiliate them** in front of the world, to prove your point, to prove you are the victim. *You can never imagine the damage you do when you humiliate someone, it is no less than killing their soul.*
+When you love someone and they hurt you, you have every right to discuss it with them, tell them they have hurt you, and fight with them. But **you have no right to humiliate them** in front of the world, to prove your point, to prove you are the victim. _You can never imagine the damage you do when you humiliate someone, it is no less than killing their soul._
 
 > Public humiliation or public shaming is a form of punishment whose main feature is dishonoring or disgracing a person, usually an offender or a prisoner, especially in a public place.
 

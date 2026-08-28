@@ -1,5 +1,5 @@
-import { getPosts } from '$lib/get-posts'
-import { name, website } from '$lib/info'
+import { getPosts } from '#lib/get-posts.js'
+import { name, website } from '#lib/info.js'
 
 export function GET() {
   const posts = getPosts()
@@ -39,12 +39,18 @@ export function GET() {
 function escapeXml(unsafe) {
   return String(unsafe).replace(/[<>&'"]/g, (c) => {
     switch (c) {
-      case '<': return '&lt;'
-      case '>': return '&gt;'
-      case '&': return '&amp;'
-      case '\'': return '&apos;'
-      case '"': return '&quot;'
-      default: return c
+      case '<':
+        return '&lt;'
+      case '>':
+        return '&gt;'
+      case '&':
+        return '&amp;'
+      case "'":
+        return '&apos;'
+      case '"':
+        return '&quot;'
+      default:
+        return c
     }
   })
 }
