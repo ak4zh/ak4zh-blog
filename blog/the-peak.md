@@ -6,7 +6,7 @@ date: 2026-11-26
 When I am in the mountains, I just look at the peaks and think about how it was not always there. Millions of years ago something began to rise, slowly, under pressure and friction which I was not there to see. Layer by layer, it became what it is. By the time I opened my eyes, it was already there.
 
 
-In a big family, among all the cousins there is often one person who becomes that peak for everyone else. They become someone everyone respects and can reply on. We look up at them the way we look up at the mountains. And like with the mountains, we just see its existence.  
+In a big family, among all the cousins there is often one person who becomes that peak for everyone else. They become someone everyone respects and can rely on. We look up at them the way we look up at the mountains. And like with the mountains, we just see its existence.  
 
 
 Then one day the peak is gone. You stand there looking at an empty sky, and you feel lost. You don't know where to look anymore.  
