@@ -3,7 +3,7 @@ title: The Peak
 date: 2026-11-26
 ---
 
-When I am in the mountains, I just look at a peak and think about how it was not always there. Millions of years ago something began to rise, slowly, under pressure and friction which I was not there to see. Layer by layer, it became what it is. By the time I open my eyes, it was already there. We all wish to be a little like that peak someday.  
+When I am in the mountains, I just look at a peaks and think about how it was not always there. Millions of years ago something began to rise, slowly, under pressure and friction which I was not there to see. Layer by layer, it became what it is. By the time I open my eyes, it was already there. We all wish to be a little like that peak someday.  
 
 
 In a big family, among all the cousins there is often one person who becomes that peak for everyone else. They become someone everyone respects and can reply on.  
